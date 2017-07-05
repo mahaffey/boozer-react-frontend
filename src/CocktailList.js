@@ -5,6 +5,7 @@ import Cocktail from './Cocktail'
 import {Switch, Route} from 'react-router-dom'
 import CocktailsContainer from './CocktailContainer'
 import CocktailShow from './CocktailShow'
+import NewCocktail  from './NewCocktail'
 
 class CocktailList extends React.Component {
 
@@ -51,6 +52,7 @@ class CocktailList extends React.Component {
                             <Container textAlign='left'>
                                 <Route path="/cocktails/:cocktailId" render={props => <CocktailShow {...props} />} />
                             </Container>
+                            <Container><NewCocktail /></Container>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
