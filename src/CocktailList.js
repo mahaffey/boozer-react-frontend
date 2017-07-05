@@ -50,8 +50,8 @@ class CocktailList extends React.Component {
                                     </Sidebar.Pusher>
                             </Sidebar.Pushable>
                         </Grid.Column>
-                        <Grid.Column width={12}>
-                            <Container textAlign='left'>
+                        <Grid.Column width={12} >
+                            <Container textAlign='left' >
                                 <Route path="/cocktails/:cocktailId" render={props => <CocktailShow {...props} />} />
                             </Container>
                         </Grid.Column>

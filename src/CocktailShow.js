@@ -41,7 +41,7 @@ class CocktailShow extends React.Component {
 
             if (this.state.cocktail) {
             return (
-                    <Card fluid="true">
+                    <Card fluid raised >
                         <Card.Content>
                             <h1>
                                  {` ` + this.state.cocktail.name}
@@ -69,8 +69,7 @@ class CocktailShow extends React.Component {
                                     <h3>Source:</h3>
                                     <h4>{this.state.cocktail.source}</h4>
                                 </div>
-                            </li>
-                            <hr/>
+                            </li>g
                         </ul>
                         </Card.Content>
                         <Card.Content>
