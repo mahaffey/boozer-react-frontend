@@ -34,11 +34,14 @@ class CocktailList extends React.Component {
         return (
             <div>
                 <Grid celled>
-                    <Grid.Row stretched='false'>
+                    <Grid.Row stretched='false' style={{height: window.innerHeight-75}}>
                         <Grid.Column width={4}>
-                            <h1>My Dranks</h1>
+                            <div className="dranks">
+                                <span className="border">All The Dranks</span>
+                            </div>
                             <Sidebar.Pushable as={Segment}>
                                 <Sidebar as={Menu} animation='overlay' direction='bottom' inverted>
+
                                 </Sidebar>
                                     <Sidebar.Pusher>
                                         <Segment textAlign='left'>

@@ -22,3 +22,37 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.dranks {
+  left: 0;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.dranks span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 7px;
+  font-size: 20px;
+  letter-spacing: 7px;
+}
+

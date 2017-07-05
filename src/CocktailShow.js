@@ -1,5 +1,6 @@
 import React from 'react'
 import LoaderExample from './semantic/loader'
+import { Card } from 'semantic-ui-react'
 import CocktailContainer from './CocktailContainer'
 import CocktailList from './Cocktail'
 
@@ -40,11 +41,14 @@ class CocktailShow extends React.Component {
 
             if (this.state.cocktail) {
             return (
-                    <div>
-                        <h1>
-                            Cocktail: {this.state.cocktail.name}
-                        </h1>
+                    <Card fluid="true">
+                        <Card.Content>
+                            <h1>
+                                 {` ` + this.state.cocktail.name}
+                            </h1>
+                        </Card.Content>
 
+                        <Card.Content>
                         <ul>
                             <li>
                                 <div>
@@ -68,7 +72,8 @@ class CocktailShow extends React.Component {
                             </li>
                             <hr/>
                         </ul>
-                        <div>
+                        </Card.Content>
+                        <Card.Content>
                             <h2>Ingredients:</h2>
                             <ul>
                                 {(this.state.cocktail.proportions) &&
@@ -79,8 +84,8 @@ class CocktailShow extends React.Component {
                                      <LoaderExample/>
                                  }
                             </ul>
-                        </div>
-                    </div>
+                        </Card.Content>
+                    </Card>
 
             )}} else {
             return <LoaderExample/>
@@ -99,3 +104,4 @@ class CocktailShow extends React.Component {
 }
 
 export default CocktailShow
+

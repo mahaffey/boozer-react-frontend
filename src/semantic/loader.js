@@ -8,7 +8,7 @@ const LoaderExample = () => (
                 <Loader indeterminate>Mixing Drinks</Loader>
             </Dimmer>
 
-            <Image src='http://files.gamebanana.com/img/ss/guis/5921229addf4e.jpg' />
+            <Image src='http://1.bp.blogspot.com/_coILCAwJ1tg/Sb8IRdv-xfI/AAAAAAAAD30/Ol_qSPwJqLQ/s1600/BeachBar2.jpg' />
         </Segment>
     </div>
 )
