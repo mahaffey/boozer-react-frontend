@@ -1,6 +1,6 @@
 import React from 'react'
 import LoaderExample from './semantic/loader'
-import { Container, Grid } from 'semantic-ui-react'
+import { Container, Grid, Sidebar, Segment, Menu } from 'semantic-ui-react'
 import Cocktail from './Cocktail'
 import {Switch, Route} from 'react-router-dom'
 import CocktailsContainer from './CocktailContainer'
@@ -34,12 +34,18 @@ class CocktailList extends React.Component {
         return (
             <div>
                 <Grid celled>
-                    <Grid.Row>
+                    <Grid.Row stretched='false'>
                         <Grid.Column width={4}>
-                            <Container textAlign='left'>
-                                <h1>My Dranks</h1>
-                                {this.index()}
-                            </Container>
+                            <h1>My Dranks</h1>
+                            <Sidebar.Pushable as={Segment}>
+                                <Sidebar as={Menu} animation='overlay' direction='bottom' inverted>
+                                </Sidebar>
+                                    <Sidebar.Pusher>
+                                        <Segment textAlign='left'>
+                                            {this.index()}
+                                        </Segment>
+                                    </Sidebar.Pusher>
+                            </Sidebar.Pushable>
                         </Grid.Column>
                         <Grid.Column width={12}>
                             <Container textAlign='left'>
