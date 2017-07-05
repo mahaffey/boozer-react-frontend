@@ -69,7 +69,7 @@ class CocktailShow extends React.Component {
                                     <h3>Source:</h3>
                                     <h4>{this.state.cocktail.source}</h4>
                                 </div>
-                            </li>g
+                            </li>
                         </ul>
                         </Card.Content>
                         <Card.Content>
