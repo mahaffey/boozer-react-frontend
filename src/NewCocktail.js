@@ -26,6 +26,20 @@ export default class NewCocktail extends React.Component {
       })
     }
 
+    submitNewCocktail(event) {
+      event.preventDefault()
+      const obj = {cocktail: this.state}
+      const url = "http://localhost:3000/api/v1/cocktails/"
+      fetch(url, {
+        method: "POST",
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(obj)
+      })
+    }
+
     render() {
       console.log(this.state)
       return (
@@ -38,7 +52,7 @@ export default class NewCocktail extends React.Component {
             <textarea value={this.state.cocktailInstructions} onChange={this.addNew} name='cocktailInstructions'/>
           <h4>Proportions:</h4>
           <ProportionsForm submitProportion={this.submitProportion.bind(this)}/>
-          {/* <input type="submit" onClick={this.addNew} value="Add New Cocktail!" /> */}
+          <input type="submit" onClick={this.submitNewCocktail.bind(this)} value="Add New Cocktail!"/>
         </form>
       )
     }
