@@ -1,6 +1,6 @@
 import React from 'react'
 import LoaderExample from './semantic/loader'
-import { Container, Grid, Sidebar, Segment, Menu } from 'semantic-ui-react'
+import { Container, Grid, Sidebar, Segment, Menu, List } from 'semantic-ui-react'
 import Cocktail from './Cocktail'
 import { Route } from 'react-router-dom'
 import CocktailsContainer from './CocktailContainer'
@@ -14,17 +14,23 @@ class CocktailList extends React.Component {
 
 
             const cocktailList =
-                <ol>
-                    {this.props.allCocktails.map((el, idx) => {
-                        return (
-                            <li key={idx}>
 
-                                <Cocktail cocktail={el} key={idx}/>
-                            </li>
-                            )
-                        })
-                    }
-                </ol>
+                    <List divided ordered>
+                        {this.props.allCocktails.map((el, idx) => {
+                            return (
+                                <List.Item key={idx}>
+                                    <List.Content>
+                                        <List.Header>
+                                            <br/>
+                                            <Cocktail cocktail={el} key={idx}/>
+                                        </List.Header>
+                                    </List.Content>
+                                </List.Item>
+                                )
+                            })
+                        }
+                    </List>
+
             return cocktailList
         } else {
             return (<LoaderExample/>)
@@ -43,9 +49,7 @@ class CocktailList extends React.Component {
                                 <span className="border">All The Dranks</span>
                             </div>
                             <Sidebar.Pushable as={Segment}>
-                                <Sidebar as={Menu} animation='overlay' direction='bottom' inverted>
-
-                                </Sidebar>
+                                <Sidebar as={Menu} animation='overlay' direction='bottom' inverted />
                                     <Sidebar.Pusher>
                                         <Segment textAlign='left'>
                                             {this.index()}
