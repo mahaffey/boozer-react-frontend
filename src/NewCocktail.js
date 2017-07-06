@@ -30,6 +30,7 @@ export default class NewCocktail extends React.Component {
     submitNewCocktail(event) {
       event.preventDefault()
       const obj = {cocktail: this.state}
+      debugger
       const url = "http://localhost:3000/api/v1/cocktails/"
       fetch(url, {
         method: "POST",
@@ -78,7 +79,7 @@ export default class NewCocktail extends React.Component {
             </Form.Field>
 
 
-            <Button type="submit" onClick={this.logNewCockTail} >Add New Cocktail!</Button>
+            <Button type="submit" onClick={this.submitNewCocktail.bind(this)} >Add New Cocktail!</Button>
           </Form>
           {(this.state.cocktailProportions.length > 0) && this.addedIngredients()}
       </div>
