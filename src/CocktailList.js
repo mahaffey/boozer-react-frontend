@@ -15,16 +15,14 @@ class CocktailList extends React.Component {
 
             const cocktailList =
 
-                    <List divided relaxed ordered>
+                    <List divided relaxed>
                         {this.props.allCocktails.map((el, idx) => {
                             return (
                                 <List.Item key={idx}>
+                                    <List.Icon name='cocktail' />
                                     <List.Content>
-                                        <List.Header>
-                                            <div>
-                                                &nbsp;&nbsp;
-                                                <Cocktail cocktail={el} key={idx}/>
-                                            </div>
+                                        <List.Header >
+                                            <Cocktail cocktail={el} key={idx}/>
                                         </List.Header>
                                     </List.Content>
                                 </List.Item>
@@ -60,6 +58,7 @@ class CocktailList extends React.Component {
                             </Sidebar.Pushable>
                         </Grid.Column>
                         <Grid.Column width={12} >
+                            <br/>
                             <Container textAlign='left' >
                                 <Route path="/cocktails/:cocktailId" render={props => <CocktailShow {...props} />} />
                             </Container>

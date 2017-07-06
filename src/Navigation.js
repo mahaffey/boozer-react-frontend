@@ -15,10 +15,6 @@ class MenuInvert extends React.Component {
             this.setState({visible: !this.state.visible})
         };
 
-    isVisible = () => {
-        this.toggleVisibility()
-    }
-
 
     render() {
         const { activeItem } = this.state.activeItem;
