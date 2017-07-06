@@ -27,16 +27,16 @@ export default class ProportionsForm extends React.Component {
     return (
         <Form>
           <Form.Field>
-            <label>Ingredient:</label>
+            <label style={{color: 'white'}}>Ingredient:</label>
             <input onChange={this.setProportion} type='text' name='ingredient'/>
           </Form.Field>
 
           <Form.Field>
-            <label>Amount:</label>
+            <label style={{color: 'white'}}>Amount:</label>
             <input onChange={this.setProportion} type='text' name='amount'/>
           </Form.Field>
 
-          <Button type='submit' onClick={this.addProportion.bind(this)} >Add Proportion!</Button>
+          <Button inverted color='red' type='submit' onClick={this.addProportion.bind(this)} >Add Proportion!</Button>
         </Form>
 
     )

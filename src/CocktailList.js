@@ -15,14 +15,16 @@ class CocktailList extends React.Component {
 
             const cocktailList =
 
-                    <List divided ordered>
+                    <List divided relaxed ordered>
                         {this.props.allCocktails.map((el, idx) => {
                             return (
                                 <List.Item key={idx}>
                                     <List.Content>
                                         <List.Header>
-                                            <br/>
-                                            <Cocktail cocktail={el} key={idx}/>
+                                            <div>
+                                                &nbsp;&nbsp;
+                                                <Cocktail cocktail={el} key={idx}/>
+                                            </div>
                                         </List.Header>
                                     </List.Content>
                                 </List.Item>
@@ -48,9 +50,9 @@ class CocktailList extends React.Component {
                             <div className="dranks">
                                 <span className="border">All The Dranks</span>
                             </div>
-                            <Sidebar.Pushable as={Segment}>
+                            <Sidebar.Pushable as={Segment} style={{height: window.innerHeight-200}}>
                                 <Sidebar as={Menu} animation='overlay' direction='bottom' inverted />
-                                    <Sidebar.Pusher>
+                                    <Sidebar.Pusher >
                                         <Segment textAlign='left'>
                                             {this.index()}
                                         </Segment>

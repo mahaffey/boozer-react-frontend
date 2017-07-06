@@ -42,7 +42,7 @@ class MenuInvert extends React.Component {
                     <Icon name='add square' />
                     Add Cocktail
                     <Link to={window.location.pathname}>
-                        <Route component={() => <NewCocktailModal visible={this.state.visible} toggle={this.isVisible}/>}/>
+                        <Route component={() => <NewCocktailModal visible={this.state.visible} toggle={this.toggleVisibility.bind(this)}/>}/>
                     </Link>
                 </Menu.Item>
 

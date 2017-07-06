@@ -6,7 +6,7 @@ export default class NewCocktail extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state ={
+    this.state = {
       cocktailName: "",
       cocktailDescription: "",
       cocktailInstructions: "",
@@ -40,6 +40,13 @@ export default class NewCocktail extends React.Component {
         },
         body: JSON.stringify(obj)
       })
+
+      this.setState({cocktailName: "",
+        cocktailDescription: "",
+        cocktailInstructions: "",
+        cocktailProportions: [],})
+
+        this.props.toggle()
     }
 
 
@@ -59,12 +66,12 @@ export default class NewCocktail extends React.Component {
       <div>
           <Form>
             <Form.Field>
-              <label>Name:</label>
+              <label style={{color: 'white'}}>Name:</label>
                 <input type='text' value={this.state.cocktailName} onChange={this.addNew} name='cocktailName'/>
             </Form.Field>
 
             <Form.Field>
-              <label>Description:</label>
+              <label style={{color: 'white'}}>Description:</label>
                 <textarea value={this.state.cocktailDescription} onChange={this.addNew} name='cocktailDescription'/>
             </Form.Field>
 
@@ -74,12 +81,12 @@ export default class NewCocktail extends React.Component {
             </Form.Field>
 
             <Form.Field>
-              <label>Instructions:</label>
+              <label style={{color: 'white'}}>Instructions:</label>
                 <textarea value={this.state.cocktailInstructions} onChange={this.addNew} name='cocktailInstructions'/>
             </Form.Field>
 
 
-            <Button type="submit" onClick={this.submitNewCocktail.bind(this)} >Add New Cocktail!</Button>
+            <Button inverted color='green' type="submit" onClick={this.submitNewCocktail.bind(this)} >Add New Cocktail!</Button>
           </Form>
           {(this.state.cocktailProportions.length > 0) && this.addedIngredients()}
       </div>

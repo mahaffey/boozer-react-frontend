@@ -6,7 +6,6 @@ export default class NewCocktailModal extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            toggle: this.props.toggle,
             modalOpen: this.props.visible
         }
     }
@@ -17,7 +16,7 @@ export default class NewCocktailModal extends React.Component {
             modalOpen: false,
         });
 
-        this.state.toggle()
+        this.props.toggle()
 
     }
 
@@ -32,13 +31,8 @@ export default class NewCocktailModal extends React.Component {
             >
                 <Header icon='browser' content='New Cocktail' />
                 <Modal.Content>
-                    <NewCocktail/>
+                    <NewCocktail toggle={this.handleClose.bind(this)} />
                 </Modal.Content>
-                <Modal.Actions>
-                    <Button color='green' onClick={this.handleClose} inverted>
-                        <Icon name='checkmark' /> Got it
-                    </Button>
-                </Modal.Actions>
             </Modal>
         )
     }
