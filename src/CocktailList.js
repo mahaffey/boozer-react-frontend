@@ -1,6 +1,6 @@
 import React from 'react'
 import LoaderExample from './semantic/loader'
-import { Container, Grid, Sidebar, Segment, Menu, Card } from 'semantic-ui-react'
+import { Container, Grid, Sidebar, Segment, Menu } from 'semantic-ui-react'
 import Cocktail from './Cocktail'
 import { Route } from 'react-router-dom'
 import CocktailsContainer from './CocktailContainer'
@@ -34,11 +34,10 @@ class CocktailList extends React.Component {
 
      render() {
 
-
         return (
             <div>
                 <Grid celled>
-                    <Grid.Row stretched='false' style={{height: window.innerHeight-75}}>
+                    <Grid.Row style={{height: window.innerHeight-135}}>
                         <Grid.Column width={4}>
                             <div className="dranks">
                                 <span className="border">All The Dranks</span>

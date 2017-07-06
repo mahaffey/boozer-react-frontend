@@ -13,10 +13,10 @@ class MenuInvert extends React.Component {
 
     toggleVisibility = (event) => {
         debugger
-        if (event.target.id === "new") {
-            this.setState({visible: true})
-        } else {
+        if (event.target.id !== "new") {
             this.setState({visible: false})
+        } else {
+            this.setState({visible: true})
             }
         }
 
@@ -27,19 +27,19 @@ class MenuInvert extends React.Component {
             <Menu inverted>
                 <Link to="/">
                     <Menu.Item name='home' active={activeItem === 'home'}>
-                        <Icon name='diamond icon' />
+                        <Icon name='diamond' />
                         Home
                     </Menu.Item>
                 </Link>
                 <Link to="/cocktails">
                     <Menu.Item name='messages' active={activeItem === 'cocktails'}>
-                        <Icon name='cocktail icon' />
+                        <Icon name='cocktail' />
                         Cocktails
                     </Menu.Item>
                 </Link>
 
                 <Menu.Item id='new' name='new' active={activeItem === 'new'} onClick={this.toggleVisibility}>
-                    <Icon name='add square icon' />
+                    <Icon name='add square' />
                     Add Cocktail
                     <Link to={window.location.pathname}>
                         <Route component={() => <NewCocktailModal visible={this.state.visible}/>}/>

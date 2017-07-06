@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Navigation from './Navigation'
 import './App.css'
 import Home from './Home'
@@ -15,7 +15,6 @@ class App extends Component {
               <div>
                   <div>
                       <Navigation/>
-                      <hr/>
                       <Route exact path='/' component={Home} />
                       <Route path='/cocktails' component={CocktailsRouter} />
                   </div>

@@ -1,8 +1,6 @@
 import React from 'react'
 import LoaderExample from './semantic/loader'
 import { Card } from 'semantic-ui-react'
-import CocktailContainer from './CocktailContainer'
-import CocktailList from './Cocktail'
 
 class CocktailShow extends React.Component {
 
@@ -77,7 +75,7 @@ class CocktailShow extends React.Component {
                             <ul>
                                 {(this.state.cocktail.proportions) &&
                                      this.state.cocktail.proportions.map(el =>
-                                        <li>{el.ingredient_name} - {el.amount}</li>)
+                                        <li key={el.ingredient_name}>{el.ingredient_name} - {el.amount}</li>)
                                  ||
 
                                      <LoaderExample/>
