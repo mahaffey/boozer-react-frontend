@@ -76,7 +76,6 @@ export default class NewCocktail extends React.Component {
             </Form.Field>
 
             <Form.Field>
-              <h4>Proportions:</h4>
               <ProportionsForm submitProportion={this.submitProportion.bind(this)}/>
             </Form.Field>
 
