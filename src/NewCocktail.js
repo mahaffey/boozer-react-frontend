@@ -27,9 +27,20 @@ export default class NewCocktail extends React.Component {
       })
     }
 
-    logNewCockTail(event) {
-      console.log(this.state)
+    submitNewCocktail(event) {
+      event.preventDefault()
+      const obj = {cocktail: this.state}
+      const url = "http://localhost:3000/api/v1/cocktails/"
+      fetch(url, {
+        method: "POST",
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(obj)
+      })
     }
+
 
     addedIngredients(){
       return(
