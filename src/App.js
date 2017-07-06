@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Navigation from './Navigation'
+import './App.css'
 import Home from './Home'
 import CocktailsRouter from './CocktailsRouter'
-import './App.css';
 
 class App extends Component {
   render() {
@@ -16,9 +16,10 @@ class App extends Component {
                   <div>
                       <Navigation/>
                       <hr/>
+                      <Route exact path='/' component={Home} />
+                      <Route path='/cocktails' component={CocktailsRouter} />
                   </div>
-                  <Route exact path='/' component={Home} />
-                  <Route path='/cocktails' component={CocktailsRouter} />
+
               </div>
           </Router>
           </div>

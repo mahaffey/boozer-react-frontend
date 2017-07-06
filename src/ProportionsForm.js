@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button, Form } from 'semantic-ui-react'
 
 export default class ProportionsForm extends React.Component {
   constructor() {
@@ -22,15 +23,20 @@ export default class ProportionsForm extends React.Component {
 
   render () {
     return (
-      <div>
-        <form >
-          <label>Ingredient:</label>
-          <input onChange={this.setProportion} type='text' name='ingredient'></input>
-          <label>Amount:</label>
-          <input onChange={this.setProportion} type='text' name='amount'></input>
-          <input type='submit' onClick={this.addProportion.bind(this)} value="Add Proportion!"></input>
-        </form>
-      </div>
+        <Form>
+          <Form.Field>
+            <label>Ingredient:</label>
+            <input onChange={this.setProportion} type='text' name='ingredient'/>
+          </Form.Field>
+
+          <Form.Field>
+            <label>Amount:</label>
+            <input onChange={this.setProportion} type='text' name='amount'/>
+          </Form.Field>
+
+          <Button type='submit' onClick={this.addProportion.bind(this)} >Add Proportion!</Button>
+        </Form>
+
     )
 
   }
