@@ -9,19 +9,19 @@ class MenuInvert extends React.Component {
     state = {
         activeItem: 'home',
         visible: false
+    };
+
+    toggleVisibility = () => {
+            this.setState({visible: !this.state.visible})
+        };
+
+    isVisible = () => {
+        this.toggleVisibility()
     }
 
-    toggleVisibility = (event) => {
-        debugger
-        if (event.target.id !== "new") {
-            this.setState({visible: false})
-        } else {
-            this.setState({visible: true})
-            }
-        }
 
     render() {
-        const { activeItem } = this.state.activeItem
+        const { activeItem } = this.state.activeItem;
 
         return (
             <Menu inverted>
@@ -42,7 +42,7 @@ class MenuInvert extends React.Component {
                     <Icon name='add square' />
                     Add Cocktail
                     <Link to={window.location.pathname}>
-                        <Route component={() => <NewCocktailModal visible={this.state.visible}/>}/>
+                        <Route component={() => <NewCocktailModal visible={this.state.visible} toggle={this.isVisible}/>}/>
                     </Link>
                 </Menu.Item>
 
@@ -57,7 +57,7 @@ const Navigation = () => {
             <MenuInvert />
         </div>
     )
-}
+};
 
 export default Navigation
 

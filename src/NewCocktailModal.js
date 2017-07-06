@@ -6,6 +6,7 @@ export default class NewCocktailModal extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            toggle: this.props.toggle,
             modalOpen: this.props.visible
         }
     }
@@ -14,7 +15,10 @@ export default class NewCocktailModal extends React.Component {
         console.log('closed')
         this.setState({
             modalOpen: false,
-        })
+        });
+
+        this.state.toggle()
+
     }
 
     render() {
