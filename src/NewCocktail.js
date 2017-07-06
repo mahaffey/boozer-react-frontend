@@ -30,7 +30,6 @@ export default class NewCocktail extends React.Component {
     submitNewCocktail(event) {
       event.preventDefault()
       const obj = {cocktail: this.state}
-      debugger
       const url = "http://localhost:3000/api/v1/cocktails/"
       fetch(url, {
         method: "POST",
