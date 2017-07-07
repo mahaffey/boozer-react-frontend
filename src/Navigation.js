@@ -86,7 +86,7 @@ class MenuInvert extends React.Component {
                     </Menu.Item>
                 </Link>
 
-                {this.state.loggedIn && <Menu.Item id='new' name='new' active={activeItem === 'new'} onClick={this.toggleVisibility}>
+                { this.state.auth.isLoggedIn && <Menu.Item id='new' name='new' active={activeItem === 'new'} onClick={this.toggleVisibility}>
                     <Icon name='add square' />
                     Add Cocktail
                     <Link to={window.location.pathname}>
@@ -94,9 +94,9 @@ class MenuInvert extends React.Component {
                     </Link>
                 </Menu.Item> }
 
-                <Menu.Item name='login' active={this.state.activeItem === 'login'}><Link to='/login'>Login</Link></Menu.Item>
+                { !this.state.auth.isLoggedIn && <Menu.Item name='login' active={this.state.activeItem === 'login'}><Link to='/login'>Login</Link></Menu.Item> }
 
-                <Menu.Item active={this.state.activeItem === 'logout'} onClick={this.logout.bind(this)}><Link to='/'>Logout</Link></Menu.Item>
+                { this.state.auth.isLoggedIn && <Menu.Item active={this.state.activeItem === 'logout'} onClick={this.logout.bind(this)}><Link to='/'>Logout</Link></Menu.Item> }
 
             </Menu>
             <Route path='/cocktails' render={() => this.state.auth.isLoggedIn ? <CocktailsRouter /> : <Redirect to='/login' /> } />
