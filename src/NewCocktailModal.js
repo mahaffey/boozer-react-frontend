@@ -11,7 +11,6 @@ export default class NewCocktailModal extends React.Component {
     }
 
     handleClose = (e) => {
-        console.log('closed')
         this.setState({
             modalOpen: false,
         });
@@ -21,7 +20,6 @@ export default class NewCocktailModal extends React.Component {
     }
 
     render() {
-        console.log(this.state.modalOpen, 'idk whats happening')
         return (
             <Modal
                 open={this.state.modalOpen}

@@ -15,7 +15,6 @@ class CocktailShow extends React.Component {
 
             cocktailId = this.props.match.params.cocktailId
         }
-        console.log(this.props.match.params.cocktailId )
         if(cocktailId) {
             // debugger
             fetch(baseUrl + cocktailId)
@@ -26,7 +25,6 @@ class CocktailShow extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
-        console.log("will receive props", nextProps)
         this.fetchCocktail(nextProps)
     }
 
@@ -101,4 +99,3 @@ class CocktailShow extends React.Component {
 }
 
 export default CocktailShow
-
