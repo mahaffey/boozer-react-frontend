@@ -17,13 +17,25 @@ export default class Search extends React.Component {
     }
 
     render () {
+        if (document.location.pathname === '/cocktails') {
+            return (
+                <Input
+                    placeholder='Name or Ingredient!'
+                    value={this.state.query}
+                    onChange={this.handleChange.bind(this)}
+                    icon='search'
+                />
+            )
+        } else {
         return (
             <Input
-                placeholder='Search Cocktails'
+                disabled
+                placeholder='Name or Ingredient!'
                 value={this.state.query}
                 onChange={this.handleChange.bind(this)}
                 icon='search'
             />
         )
+        }
     }
 }

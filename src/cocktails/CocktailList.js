@@ -5,7 +5,7 @@ import Cocktail from './Cocktail'
 import { Route } from 'react-router-dom'
 import CocktailsContainer from './CocktailContainer'
 import CocktailShow from './CocktailShow'
-import {unique} from '../arrayUnique'
+import { unique } from '../arrayUnique'
 
 class CocktailList extends React.Component {
 
