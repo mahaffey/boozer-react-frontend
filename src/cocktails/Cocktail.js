@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom'
 export default class Cocktail extends React.Component {
 
     render() {
-        var cocktailLink = `/cocktails/`
-        var cocktailName = ''
+        let cocktailLink = `/cocktails/`
+        let cocktailName = ''
         if (this.props && this.props.cocktails) {
             cocktailLink += this.props.cocktails.id
             cocktailName = this.props.cocktails.name

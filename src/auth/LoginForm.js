@@ -42,7 +42,7 @@ export default class Login extends Component {
               <input name='password' placeholder='password' type='password' onChange={this.handleChange} />
             </Form.Field>
 
-            <Button inverse color='green' type='submit'>Log In</Button>
+            <Button inverted color='green' type='submit'>Log In</Button>
           </Form>
         </Segment>
       </div>

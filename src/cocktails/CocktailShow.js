@@ -1,10 +1,8 @@
 import React from 'react'
-import LoaderExample from './semantic/loader'
+import LoaderExample from '../semantic/loader'
 import { Card } from 'semantic-ui-react'
 
 class CocktailShow extends React.Component {
-
-
 
     fetchCocktail (nextProps) {
         const baseUrl = 'http://localhost:3000/api/v1/cocktails/'
@@ -12,11 +10,9 @@ class CocktailShow extends React.Component {
         if (nextProps){
             cocktailId = nextProps.match.params.cocktailId
         }else{
-
             cocktailId = this.props.match.params.cocktailId
         }
         if(cocktailId) {
-            // debugger
             fetch(baseUrl + cocktailId)
                 .then(res => res.json())
                 .then(jsonRes => {
@@ -34,7 +30,6 @@ class CocktailShow extends React.Component {
 
     loading () {
         if (this.state) {
-
             if (this.state.cocktail) {
             return (
                     <Card fluid raised >
