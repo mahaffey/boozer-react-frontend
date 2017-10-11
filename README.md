@@ -6,7 +6,7 @@
 ## Enter The Cocktail Wiki
 
 ## Demo
-!['Cocktail Wiki'](https://gfycat.com/ifr/MilkyCalmIndianrhinoceros)
+!['Cocktail Wiki'](./Demo.gif?raw=true)
 
 
 ## User Story
