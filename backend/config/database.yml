@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: get-lit-api-web-0716_development
+  database: the-cocktail-wiki-api_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: get-lit-api-web-0716
+  #username: the-cocktail-wiki-api
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: get-lit-api-web-0716_test
+  database: the-cocktail-wiki-api_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: get-lit-api-web-0716_production
-  username: get-lit-api-web-0716
-  password: <%= ENV['GET-LIT-API-WEB-0716_DATABASE_PASSWORD'] %>
+  database: the-cocktail-wiki-api_production
+  username: the-cocktail-wiki-api
+  password: <%= ENV['THE-COCKTAIL-WIKI_DATABASE_PASSWORD'] %>
